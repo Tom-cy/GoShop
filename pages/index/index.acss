@@ -1,0 +1,127 @@
+page {
+  background-color: #f2f5f8;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-image {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 12px;
+  background-color: white;
+  color: gray;
+  line-height: 35px;
+}
+
+.feature-ico {
+  width: 14rpx;
+  height: 14rpx;
+  margin-right: 6rpx;
+}
+
+.title-tag {
+  margin-left: 15px;
+}
+
+.title-ico {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+
+.scroll-rcc-items {
+  width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.items-cover {
+  width: 170rpx;
+  height: 250rpx;
+  margin-left: 15rpx;
+  border-radius: 3px;
+}
+
+.new-item-list {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item-outter {
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  padding: 6rpx 10rpx;
+}
+
+.new-item-cover {
+  width: 350rpx;
+  height: 510rpx;
+  margin-right: 10rpx;
+}
+
+.item-border {
+  height: 110rpx;
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-color: #f2f5f8;
+  display: flex;
+      overflow: hidden;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tags {
+  background-color: #f2f5f8;
+  font-size: 11 px;
+  color: gray;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  padding: 5rpx 10rpx;
+  height: 30rpx;
+  /* display: -webkit-box; */
+  /* overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; */
+}
+
+.price-border {
+  border-left: solid 1px;
+  border-bottom: solid 1px;
+  border-right: solid 1px;
+  border-color: #f2f5f8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price {
+  margin-left: 10rpx;
+  font-size: 11px;
+  color: #ff6699;
+  margin-bottom: 10rpx;
+}
+
+.like-counts {
+  font-size: 11px;
+  margin-right: 12rpx;
+  margin-bottom: 10rpx;
+  color: gray
+}
+
+.like-ico {
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}

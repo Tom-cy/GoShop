@@ -1,0 +1,40 @@
+ 
+ page{
+   display: flex;
+   flex-direction: column;
+   background-color: #f2f5f8
+ }
+
+ .empty{
+   margin-top: 360rpx;
+   text-align: center;
+
+ }
+
+ .goshopping-img {
+   width: 300rpx;
+   height: 300rpx;
+
+ }
+ .empty-words{
+   color: #9c9c9c;
+   font-size: 16px;
+   margin-top: 20rpx;
+ }
+
+
+ .help-yourself-outter{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+ .help-yourself-words {
+   width: 240rpx;
+   color: #ff679a;
+   font-size: 15px;
+   margin-top: 20rpx;
+   border: solid 1px; 
+   border-color: #ff679a;
+   line-height: 50rpx;
+   border-radius: 12px
+ }

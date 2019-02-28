@@ -1,0 +1,28 @@
+<!-- 定义模版标签 -->
+<template name="itemList" >
+ <view  class="new-item-list" >
+  <block a:for="{{newItemList}}"  >
+    <view class="item-outter">
+      <navigator url="/pages/query/item/item?itemId={{item.id}}" open-type="navigate" >
+        <image  src="{{item.cover}}"  class="new-item-cover" />
+      </navigator>
+     
+      <view class="item-border">
+        <block  a:for="{{item.tagList}}" a:for-item="tags"  >
+          <view class="tags">{{tags}}</view>
+        </block>
+      </view>
+  <view class="price-border">
+    <view class="price">￥{{item.priceDiscountYuan}}</view>
+    <view class="like-counts">
+    {{item.likeCounts}}
+    <image  src="/resources/icon/smallIco/likes.png"  class="like-ico" />
+    </view>
+  </view>
+  </view>
+  </block>
+
+</view>
+
+
+</template>

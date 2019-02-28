@@ -1,0 +1,64 @@
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#ff6699" style="height:400rpx;">
+  <block a:for="{{carousels}}" a:for-item="pic">
+    <swiper-item>
+      <image src="{{pic.imageUrl}}" class="slide-image" 
+      onTap="showItemList"
+      data-itemId="{{pic.itemId}}"
+      data-catId="{{pic.catId}}"
+      data-searchType="{{pic.type}}"
+      
+      />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="feature">
+  <view>
+    <image src="/resources/icon/smallIco/fang.png" class="feature-ico" />    全场包邮  
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/flash.png" class="feature-ico" />    先行赔付  
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/yuan.png" class="feature-ico" />    7天无理由  
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/ling.png" class="feature-ico" />    优先退款  
+  </view>
+</view>
+<view class="title-item-list">
+  <view class="title-tag">
+    <image src="/resources/icon/smallIco/rec.png" class="title-ico" />    热门推荐  
+  </view>
+</view>
+<scroll-view class="scroll-rcc-items" scroll-x="{{true}}">
+  <block a:for="{{recdata}}">
+    <image src="{{item.cover}}" class="items-cover" data-itemId="{{item.id}}" onTap="showItem"/>
+  </block>
+</scroll-view>
+<view class="title-item-list">
+  <view class="title-tag">
+    <image src="/resources/icon/smallIco/diamond.png" class="title-ico" />    商品上新  
+  </view>
+</view>
+<view class="new-item-list">
+  <block a:for="{{newdata}}">
+    <view class="item-outter">
+      <navigator url="/pages/query/item/item?itemId={{item.id}}" open-type="navigate">
+        <image src="{{item.cover}}" class="new-item-cover" />
+      </navigator>
+      <view class="item-border">
+        <block a:for="{{item.tagList}}" a:for-item="tags">
+          <view class="tags">{{tags}}
+          </view>
+        </block>
+      </view>
+      <view class="price-border">
+        <view class="price">￥{{item.priceDiscountYuan}}
+        </view>
+        <view class="like-counts">    {{item.likeCounts}}    
+          <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

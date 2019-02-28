@@ -1,0 +1,87 @@
+<scroll-view class="scroll-item-cover" scroll-x="{{true}}">
+  <block a:for="{{headerImagesArr}}" a:for-item="headerImg">
+    <image src="{{headerImg}}" class="item-cover"/>
+  </block>
+</scroll-view>
+<view class="item-title">  {{item.name}}
+
+</view>
+<view class="price">
+  <view class="item-price-low">￥{{item.priceDiscountYuan}} 
+  </view>
+  <view class="item-price-high">￥{{item.priceNormalYuan}}  
+  </view>
+  <view class="item-price-discount">{{item.discounts}}  
+  </view>
+</view>
+<!-- 销量 收藏 发货 -->
+<view class="properties">
+  <view> 销量{{item.sellCounts}}
+  </view>
+  <view> 收藏{{item.likeCounts}}人
+  </view>
+  <view> 72小时发货
+  </view>
+</view>
+<!-- 分割线 -->
+<view class="line-outter">
+  <view class="line">
+  </view>
+</view>
+<!-- 商城特色。服务 -->
+<view class="features">
+  <view class="feature-item">
+    <image src="/resources/icon/smallIco/right.png" class="feature-ico" />    全国包邮  
+  </view>
+  <view class="feature-item">
+    <image src="/resources/icon/smallIco/right.png" class="feature-ico" />    退货补运费  
+  </view>
+  <view class="feature-item">
+    <image src="/resources/icon/smallIco/right.png" class="feature-ico" />    7天无理由   
+  </view>
+  <view class="feature-item">
+    <image src="/resources/icon/smallIco/right.png" class="feature-ico" />    闪电发货  
+  </view>
+</view>
+<view class="item-desc-bar">
+  <view class="item-desc-title">商品详情
+  </view>
+</view>
+<!-- 商品详情的具体内容展示 -->
+<view class="item-desc-content">
+  <block a:for="{{itemCountentArr}}" a:for-item="content">
+    <block a:if="{{content.contentType == 1}}">
+      <view style="{{content.cssStyle}}">{{content.words}}
+      </view>
+    </block>
+    <block a:elif="{{content.contentType == 2}}">
+      <image src="{{content.url}}" style="{{content.cssStyle}}"/>
+    </block>
+    
+  </block>
+</view>
+
+<view class="botton-operator">
+
+<view class="like-img ">
+  <image src="/resources/icon/smallIco/{{cartIco}}.png" class="like-ico " />
+  <view class="like-words" onTap="goToCar"> 购物车</view>
+</view>
+
+<view class="like-img">
+  <image src="/resources/icon/smallIco/unlike.png" class="like-ico" />
+  <view class="like-words">收藏</view>
+</view>
+
+  <view class="add-to-cart" onTap="addToCart">
+    <view animation="{{animationInfo}}"
+    style="opacity:{{animationOpacity}};background-image:url('{{headerImagesArr[0]}}')" 
+    class="animation-img">
+
+    </view>
+    放入购物车
+    </view>
+
+
+  <view class="buy-me">购买</view>
+</view>
